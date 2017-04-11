@@ -1,1 +1,1 @@
-# punygod.github.com
+# punygod.github.io
