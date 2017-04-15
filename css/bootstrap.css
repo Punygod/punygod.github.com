@@ -6756,3 +6756,29 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+body {
+	padding:70px;
+}
+
+header,footer,nav,section,aside,article{
+	border:1px dotted #f0f0f0;
+	border-radius:5px;
+}
+
+a,a:hover {
+	text-decoration: none;
+}
+
+.divContent {
+	min-height:350px;
+}
+ 
+/* ÖØÐ´bootstrapÖÐµÄÒ»¸öÑùÊ½ */
+/* .jumbotron {
+	background-color:#fdfdfd;
+} */
+/* ÖØÐ´ÁËtable¡ªhover µÄÑùÊ½ */
+.table-hover > tbody > tr:hover {
+  background-color: #8080c0;
+}
+
