@@ -34,3 +34,18 @@ html {
    -moz-opacity:0.5;
    opacity: 0.5;
 }
+
+.title {
+    /*position: relative;*/
+    height: 12%;
+}
+
+.title_content {
+    color:green;
+    padding-left:10%;
+    padding-top:4%;
+}
+
+.timestamp {
+    padding-left: 10%;
+}
