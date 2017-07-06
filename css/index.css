@@ -50,3 +50,8 @@ html {
     padding-left: 10%;
     color: yellow;
 }
+.index_music{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
