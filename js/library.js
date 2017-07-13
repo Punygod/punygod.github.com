@@ -43,14 +43,10 @@
             width = arr[i].width;
             callback = arr[i].callback;
             switch(direction){
-                case 0:
-                            top = offset+'px';break;
-                case 1:
-                            bottom = offset+'px';break;
-                case 2:
-                            left = offset+'px';break;
-                case 3:
-                            right = offset+'px';break;
+                case 0: top = offset+'px';break;
+                case 1: bottom = offset+'px';break;
+                case 2: left = offset+'px';break;
+                case 3: right = offset+'px';break;
             }
             $('#'+id).animate(
                 {
@@ -59,11 +55,11 @@
                     top:top,
                     bottom:bottom,
                     opacity:opacity,
-                    height:'10%'/*,
-                    width:'150px'*/
+                    height:'10%',
+                    width:width
                 },
                 "slow",//speed
-                test//callback
+                callback//callback
                 );
         }
     }
