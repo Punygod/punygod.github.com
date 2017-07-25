@@ -50,12 +50,12 @@
             }
             $('#'+id).animate(
                 {
-                    left:'10%',
+                    left:left,
                     right:right,
                     top:top,
                     bottom:bottom,
                     opacity:opacity,
-                    height:'10%',
+                    height:($('#'+id).height()-height)+'px',
                     width:width
                 },
                 "slow",//speed

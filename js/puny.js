@@ -6,7 +6,7 @@ $(function(){
 })
 
 function showtime(e){
-    puny.anim({id:'header',direction:2,offset:100,opacity:1,height:'10%',width:'100%',callback:test})
+    // puny.anim({id:'header',direction:2,offset:100,opacity:1,height:'10%',width:'100%',callback:test})
     // $('#header').animate(
     //     {
     //         right:'250px',
@@ -18,28 +18,29 @@ function showtime(e){
     //     test//callback
     //     );
 
-    // e=e || window.event;
-    // if(e.wheelDelta){//IE/Opera/Chrome
-    //     if(e.wheelDelta==120){
-    //         //向上滚动事件
-    //         alert("向上1");
-    //     }else{
-    //         //向下滚动事件
-    //         alert("向下1");
-    //     }
-    // }else if(e.detail){//Firefox
-    //     if(e.detail==-3) {
-    //         //向上滚动事件
-    //         alert("向上2");
-    //     }else{
-    //         //向下滚动事件
-    //         alert("向下2");
-    //      }
-    // } //ScrollText(direct);
+    e=e || window.event;
+    if(e.wheelDelta){//IE/Opera/Chrome
+        if(e.wheelDelta==120){
+            //向上滚动事件
+            console.log("UP-->120")
+            puny.anim({id:'header',direction:0,offset:100,opacity:1,height:50,width:'100%',callback:test})
+        }else{
+            //向下滚动事件
+            puny.anim({id:'header',direction:1,offset:100,opacity:1,height:-50,width:'100%',callback:test})
+        }
+    }else if(e.detail){//Firefox
+        if(e.detail==-3) {
+            //向上滚动事件
+            console.log("向上2");
+        }else{
+            //向下滚动事件
+            console.log("向下2");
+         }
+    } //ScrollText(direct);
 }
 
 function test(){
-    alert('test  Success')
+    // alert('test  Success')
     // $('#header').css('display', 'none');
 }
 
