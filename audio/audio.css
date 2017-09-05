@@ -1,0 +1,182 @@
+*:focus,
+*:active{
+    outline:none;
+}
+.audio-wl{
+    border:0px solid red;
+    background-color: #4c0606;/* #1a1a1a */
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius:4px;
+    width:280px;
+    height:25px;
+    padding: 4px;
+    padding-bottom: 6px;
+    position: relative;
+}
+
+/* 播放按钮 */
+.audio-wl-input{
+    border: none;
+    width: 25px;
+    height: 25px;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    vertical-align: top;
+}
+.audio-wl-play{
+    background-image: url(play.svg);
+}
+.audio-wl-pause{
+    background-image: url(pause.svg);
+}
+.audio-wl-input:hover{
+    cursor: pointer;
+}
+/* 时间面板 */
+.audio-time{
+    border: 0px solid red;
+    color: #b8a070;
+    height: 25px;
+    line-height: 26px;
+    font-size: 12px;
+    width: 80px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+.audio-time-panel{
+    border: 0px solid red;
+    height: 25px;
+}
+
+/* 静音按钮 */
+.audio-wl-mute{
+    background-image: url(trumpet.svg);
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.audio-wl-trumpet{
+    background-image: url(mute.svg);
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+/* input滑条 */
+.audio-slip{
+    border: 0px solid red;
+    height: 25px;
+    width: 70px;
+    position: relative;
+    display: inline-block;
+}
+.audio-voice{
+    width: 50px;
+}
+/* 去除默认样式 */
+.audio-wl-slip {
+    padding: 0;
+    height: 25px;
+    line-height: 25px;
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+    /* 自定义 */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #515635;
+    background: -webkit-linear-gradient(#059CFA, #059CFA) no-repeat;
+    background-size: 0% 100%;
+}
+.audio-wl-slip::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type="range" i] {
+  /*   -webkit-appearance: slider-horizontal;
+    color: rgb(144, 144, 144); */
+    padding: 0;
+    border: initial;
+    margin:0px;
+}
+/* 取消边框 */
+.audio-wl-slip:focus {
+    outline: none;
+}
+/* 自定义样式 */
+.audio-wl-slip::-webkit-slider-runnable-track {
+    height: 15px;
+    border-radius: 10px; /*将轨道设为圆角的*/
+    box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+/* 滑块样式 */
+.audio-wl-slip::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 13px;
+    width: 13px;
+    margin-top: 1px; /* 使滑块超出轨道部分的偏移量相等 */
+    background: black;
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+
+/* 火狐兼容 */
+.audio-wl-slip::-moz-range-progress {
+    /* background: linear-gradient(to right, #059CFA, white 100%, white); */
+    background: linear-gradient(#059CFA, #059CFA) no-repeat;
+    height: 13px;
+    border-radius: 10px;
+}
+/* 兼容ie */
+/* .audio-wl-slip {
+    -webkit-appearance: none;
+    width: 300px;
+    border-radius: 10px;
+} */
+
+.audio-wl-slip::-ms-track {
+    height: 13px;
+    border-radius: 10px;
+    background: linear-gradient(#059CFA, #059CFA) no-repeat;
+    box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+    border-color: transparent; /*去除原有边框*/
+    color: transparent; /*去除轨道内的竖线*/
+}
+
+.audio-wl-slip::-ms-thumb {
+    border: solid 0.125em rgba(205, 224, 230, 0.5);
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    background: black;
+    margin-top: 0px;
+    box-shadow: 0 .125em .125em #3b4547;
+}
+
+.audio-wl-slip::-ms-fill-lower {
+    /*进度条已填充的部分*/
+    height: 15px;
+    border-radius: 10px;
+    background: linear-gradient(#059CFA, #059CFA) no-repeat;
+    /* background: -webkit-linear-gradient(#059CFA, #059CFA) no-repeat; */
+    background-size: 0% 100%;
+}
+
+.audio-wl-slip::-ms-fill-upper {
+    /*进度条未填充的部分*/
+    height: 15px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.audio-wl-slip:focus::-ms-fill-lower {
+    background: linear-gradient(#059CFA, #059CFA) no-repeat;
+}
+
+.audio-wl-slip:focus::-ms-fill-upper {
+    background: #ffffff;
+}

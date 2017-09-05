@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="renderer" content="webkit">
+        <!--目前只有360支持此属性-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--让 IE 浏览器运行最新的渲染模式-->
+        <link rel="shortcut icon" href="img/toptab.jpg" type="image/x-icon" />
+        <title>audio标签封装demo</title>
+        <link rel="stylesheet" type="text/css" href="audio/audio.css">
+        <style type="text/css" media="screen">
+
+        </style>
+        <script type="text/javascript">
+             function initAudio(){
+                initaudio({
+                    url:'music/nobility.mp3',
+                    bodyid:'audio-body',
+                    preid:'audio-wlw'
+                })
+            }
+        </script>
+    </head>
+    <body>
+            <!-- radio标签封装demo -->
+            <div style="background: #265f4d;widht:100%;height: 500px;padding:50px;" >
+                <!-- <audio id="audio-demo" controls src="../music/nobility.mp3">duration</audio> -->
+                <input type="button" name="" onclick="initAudio();" value="初始化"/>
+                <!-- audio容器 -->
+                <div id="audio-body" style=""> </div>
+            </div>
+
+    </body>
+    <!-- vue -->
+    <script type="text/javascript" src="js/jQuery3.js"></script>
+    <script type="text/javascript" src="../js/vue-v2.4.2.js"></script>
+    <script type="text/javascript" src="audio/audio-wl.js"></script>
+</html>

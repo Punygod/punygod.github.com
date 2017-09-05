@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>include demo</title>
+    <script src="template.js"></script>
+</head>
+
+<body>
+<div id="content"></div>
+<script id="customTag" type="text/html">
+    <h1><!--[= header]--></h1>
+    <ul>
+        <!--[for(var i=0; i<tag.length; i++){]-->
+            <li>条目内容<!--[=i+1]--> : <!--[=tag[i]]--></li>
+        <!--[}]-->
+    </ul>
+</script>
+<script>
+    template.openTag = '<!--[';
+    template.closeTag = ']-->';
+    var listdata = {
+        header : 'your study list',
+        tag : ['算法导论','linq','c#','jquery','django','python']
+    };
+    var resulthtml = template.render ('customTag', listdata);
+    document.getElementById('tagcontent').innerHTML = resulthtml;
+
+    //
+</script>
+</body>
+
+</html>
