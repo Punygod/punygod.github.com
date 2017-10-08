@@ -55,3 +55,11 @@ html {
     top: 20px;
     right: 20px;
 }
+
+/* 开始菜单 */
+.zero-to-start{
+        color: green;
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+}

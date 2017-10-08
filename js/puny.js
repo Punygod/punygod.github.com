@@ -1,8 +1,17 @@
 $(function(){
-    // $('#header"').bind('onmousewheel',test);
-    /*注册事件*/
-    if(document.addEventListener){ document.addEventListener('DOMMouseScroll',showtime,false);}
-    window.onmousewheel=document.onmousewheel=showtime;
+            // $('#header"').bind('onmousewheel',test);
+            /*鼠标滚轮注册事件*/
+            if(document.addEventListener){ document.addEventListener('DOMMouseScroll',showtime,false);}
+            window.onmousewheel=document.onmousewheel=showtime;
+
+            /*初始化audio标签*/
+            // 导入css文件
+            puny.extendCss('audio/audio.css');
+            initaudio({
+                        url:'music/nobility.mp3',
+                        bodyid:'audio-body',
+                        preid:'audio-wlw'
+            })
 })
 
 function showtime(e){
@@ -23,10 +32,10 @@ function showtime(e){
         if(e.wheelDelta==120){
             //向上滚动事件
             console.log("UP-->120")
-            puny.anim({id:'header',direction:0,offset:100,opacity:1,height:50,width:'100%',callback:test})
+            // puny.anim({id:'header',direction:0,offset:100,opacity:1,height:50,width:'100%',callback:test})
         }else{
             //向下滚动事件
-            puny.anim({id:'header',direction:1,offset:100,opacity:1,height:-50,width:'100%',callback:test})
+            // puny.anim({id:'header',direction:1,offset:100,opacity:1,height:-50,width:'100%',callback:test})
         }
     }else if(e.detail){//Firefox
         if(e.detail==-3) {

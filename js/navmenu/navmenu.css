@@ -1,0 +1,121 @@
+
+/* 默认样式 */
+/* top导航菜单 */
+.wl-nav-menu-i {
+    /* border: 1px solid red; */
+    /* height: 100%; */
+    line-height: 100%;
+    padding: 2px;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align: middle;
+}
+
+.wl-t-i{
+    height: 30px;
+    color: #c2c2c2;
+    padding: 5px;
+    display: inline-block;
+    /* 宽度自适应 */
+    *display:inline;
+    *zoom:1;
+    cursor: pointer;
+}
+.wl-t-i:hover,
+.wl-t-i-active{
+    color: #fff;
+    -moz-box-shadow: 0px -4px 0px #b8a070 inset;
+    box-shadow: 0px -4px 0px #b8a070 inset;
+}
+
+/* 竖直风格 */
+.wl-nav-menu-v {
+    border: 1px solid #b8a070;
+    /* height: 100%; */
+    background: #1a1a1a;
+    line-height: 100%;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    vertical-align: middle;
+}
+.wl-t-v{
+    height: 30px;
+    line-height: 26px;
+    color: #c2c2c2;
+    padding: 0px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    /* 宽度自适应 */
+    *display:inline;
+    *zoom:1;
+    cursor: pointer;
+}
+.wl-t-v:hover,
+.wl-t-v-active{
+    color: #000;
+    background-color: #b8a070;
+    /* -moz-box-shadow: 4px 0px 0px #b8a070 inset;
+    box-shadow: 4px 0px 0px #b8a070 inset; */
+}
+
+/* 自定义样式 */
+.wl-t-i-user{
+    height: 30px;
+    padding: 0;
+    line-height: 26px;
+    color: #c2c2c2;
+    margin: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: inline-block;
+    /* 宽度自适应 */
+    *display:inline;
+    *zoom:1;
+    cursor: pointer;
+    /* 延时效果 */
+   /*  transition-property:border;
+    transition-duration:2s;
+    transition-delay:1s; */
+}
+.nav-user-select {
+     height: 30px;
+    padding: 0;
+    line-height: 26px;
+    color: #c2c2c2;
+    margin: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: inline-block;
+    /* 宽度自适应 */
+    *display:inline;
+    *zoom:1;
+    cursor: pointer;
+    padding-right: 20px;
+    background-image: url(down.svg);
+    background-position: 95% 35%;
+    background-repeat: no-repeat;
+}
+.wl-t-i-user:hover,
+.nav-user-select:hover,
+.wl-t-active-user {
+    color: #b8a070;
+    margin: 3px;
+    border: 2px solid #b8a070;
+}
+.nav-user-select:hover {
+    background-image: url(down_select.svg);
+    background-position: 95% 50%;
+}
+.nav-user-select.wl-t-active-user{
+    background-image: url(down_select.svg);
+    background-position: 95% 50%;
+}
