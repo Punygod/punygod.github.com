@@ -9,16 +9,93 @@
         <!--让 IE 浏览器运行最新的渲染模式-->
         <link rel="shortcut icon" href="img/toptab.jpg" type="image/x-icon" />
         <title>Vue-DEMO</title>
+        <style>
+            body>div{
+                margin:5px;
+                background-color: #c8c2c7;
+            }
+            body>span{
+                color:green;
+                display: block;
+                margin-top:15px;
+                padding-left:5px;
+            }
+        </style>
 
     </head>
     <body>
-            <div id="test-1">
-                <input v-on:click="counter +=1" type="button" value="你倒是点一下呢">
-                <p>你点了 {{counter}} 次</p>
-            </div>
-            <!-- radio标签封装demo -->
+        <span>1.测试</span>
+        <div >
+            <input type="button" value="Test" onclick="vueTest();" style="height: 40px;width: 100px;">
+        </div>
+        <span>2.null</span>
+        <div id="test-1">
+            <input v-on:click="counter +=1" type="button" value="你倒是点一下呢">
+            <p>你点了 {{counter}} 次</p>
+        </div>
+        <!-- radio标签封装demo -->
+        <span>3.声明式渲染</span>
+        <div id="app">
+            {{message}}
+        </div>
+
+        <!--指令-->
+        <span>5.指令 v-bind</span>
+        <div class="app-2">
+            <span v-bind:title="msg">
+                v-bind 属性被称为指令。指令带有前缀 v-，以表示他们是Vue提供的特殊属性。
+            </span>
+        </div>
+
+        <!--条件-->
+        <span>6.v-if</span>
+        <div id="app-3" style="height: 60px;padding-top:1px;">
+            <p v-if="ty">现在你看我了</p>
+        </div>
+
+        <span>7.v-for</span>
+        <div id="app-4">
+            <ol>
+                 <li v-for="i in list">
+                     {{i.val}}
+                 </li>
+            </ol>
+        </div>
+
+        <!--v-on 绑定一个事件监听器-->
+        <span>8.v-on 绑定事件监听器</span>
+        <div id="app-5">
+            <p>{{msg}}</p>
+            <input type="button" v-on:click="reverseMessage" value="逆转消息">
+        </div>
+        <!--v-model-->
+        <span>9.v-model</span>
+        <div id="app-6">
+            <input type="text" v-model="msg">
+            <p>{{msg}}</p>
+        </div>
+
+        <!--自定义组件-->
+        <span>10.自定义组件</span>
+        <div id="app-7">
+            <ol>
+                <!--现在我们为-->
+                <my-list v-for="item in groceryList"
+                    v-bind:param="item"
+                    v-bind:key="item.id">
+                </my-list>
+            </ol>
+        </div>
+
+        <!--计算属性-->
+        <span>11.计算属性</span>
+        <div id="app-8">
+            <p>原始信息:"{{msg}}"</p>
+            <p>信息翻转:"{{reversedMessage}}"</p>
+        </div>
+
     </body>
     <!-- vue -->
-    <script type="text/javascript" src="js/vue-v2.4.2.js"></script>
+    <script type="text/javascript" src="vue/vue.js"></script>
     <script type="text/javascript" src="js/vue-demo.js"></script>
 </html>
